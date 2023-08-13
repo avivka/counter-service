@@ -6,9 +6,6 @@
 trigger:
 - ci-build-and-deploy
 
-pool:
-  vmImage: ubuntu-latest
-
 steps:
 
 - task: Docker@2
