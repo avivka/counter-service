@@ -1,24 +1,11 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+- ci-build-and-deploy
 
-trigger:
-- main
-
-pool:
-  vmImage: ubuntu-latest
+pool: default
 
 steps:
-- script: |
 
-  displayName: 'build-docker-image'
 - task: Docker@2
   inputs:
     command: 'build'
-    Dockerfile: '**/Dockerfile'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    Dockerfile: '**/*.Dockerfile'
+    
