@@ -4,21 +4,18 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- ci-build-and-deploy
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: |
 
-  displayName: 'build-docker-image'
 - task: Docker@2
   inputs:
     command: 'build'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/*.Dockerfile'
+    
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+
