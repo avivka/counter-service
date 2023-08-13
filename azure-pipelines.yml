@@ -6,6 +6,8 @@
 trigger:
 - ci-build-and-deploy
 
+pool: default
+
 steps:
 
 - task: Docker@2
