@@ -1,0 +1,10 @@
+pool: default
+
+steps:
+
+- task: Docker@2
+  inputs:
+    buildContext: $(Agent.BuildDirectory)
+    command: 'build'
+    Dockerfile: '**/*.Dockerfile'
+    
