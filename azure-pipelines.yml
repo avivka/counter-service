@@ -4,7 +4,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    buildContext: $(Agent.BuildDirectory)
+    buildContext: $(Agent.BuildDirectory)/app
     command: 'build'
     Dockerfile: '**/*.Dockerfile'
     
